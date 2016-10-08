@@ -1,0 +1,36 @@
+include ../node_modules/jade-bootstrap/_bootstrap
+
+doctype html
+html
+  head
+      title= title
+      link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+      link(rel='stylesheet', href='/stylesheets/semantic.css')
+      link(rel='stylesheet', href='/stylesheets/home.css')
+      
+  body
+  include ../views/header
+  form(action='/newuser/signin/successfull', method="post")
+    .ui.input
+      input(type='text', placeholder='username', name='username')
+    br
+    .ui.input
+      input(type='text', placeholder='Password', name='password')
+    br
+    .ui.input
+      input(type='text', placeholder='Country/state', name='em')
+    br
+    button.ui.secondary.button save
+
+    
+
+    p#demo
+      script.      
+        var x = 5;
+        var y = 6;
+        var z = x + y;
+        document.getElementById("demo").innerHTML = z;
+
+  
+    
+  

@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+      title= title
+      link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+      link(rel='stylesheet', href='/stylesheets/semantic.css')
+      link(rel='stylesheet', href='/stylesheets/home.css')
+      
+  body
+  h1 #{title}
+  //h1 #{results.title} #{results.description}
+  each result in results
+    //li title is #{result.title} and description is #{result.description} id #{result._id}
+    a(href='/questions/allquestions/'+result._id, style="text-transform:capitalize;") #{result.description}
+    br
+    br
+    
+  
+  

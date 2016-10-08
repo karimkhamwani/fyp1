@@ -1,0 +1,77 @@
+nav.navbar.navbar-default.navbar-inverse(role='navigation')
+  .container-fluid
+      // Brand and toggle get grouped for better mobile display
+      .navbar-header
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+          span.sr-only Toggle navigation
+          |         
+          span.icon-bar
+          |         
+          span.icon-bar
+          |         
+          span.icon-bar
+        |       
+        a.navbar-brand(href='/newuser/signin') Do you think ? 
+      // Collect the nav links, forms, and other content for toggling
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li
+            a(href='#') Ask a question ? 
+          |         
+          
+        |       
+        form.navbar-form.navbar-left(role='search')
+          .form-group
+                .ui.search
+                  .ui.icon.input
+                      input.prompt(type='text', placeholder='')
+          |         
+          button.positive.ui.button Search
+        |       
+        ul.nav.navbar-nav.navbar-right
+          li
+            p.navbar-text Already have an account?
+          |         
+          li.dropdown
+            a.dropdown-toggle(href='#', data-toggle='dropdown')
+              b Login
+              |  
+              span.caret
+            | &#x9;&#x9;&#x9;
+            ul#login-dp.dropdown-menu
+              li
+                .row
+                  .col-md-12
+                    b Login 
+                    .social-buttons
+                      a.btn.btn-fb(href='#')
+                        i.fa.fa-facebook
+                        |  Facebook
+                    |                                 or
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; 
+                    form#login-nav.form(role='form', method='post', action='/user')
+                      .form-group
+                        label.sr-only(for='exampleInputPassword2') Username
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; 
+                        input#exampleInputEmail2.form-control(type='text',placeholder='Username', required='',name='username')
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .form-group
+                        label.sr-only(for='exampleInputPassword2') Password
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; 
+                        input#exampleInputPassword2.form-control(type='password', placeholder='Password', required='',name ='password')
+                        |                                              
+                        .help-block.text-right
+                          a(href='') Forget the password ?
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .form-group
+                        button.btn.btn-primary.btn-block(type='submit') Sign in
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                      .checkbox
+                        label
+                          input(type='checkbox')
+                          |  keep me logged-in
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .bottom.text-center
+                    | New here ? 
+                    a(href='#')
+                      b Join Us

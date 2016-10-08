@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+      title= title
+      link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+      link(rel='stylesheet', href='/stylesheets/semantic.css')
+      link(rel='stylesheet', href='/stylesheets/home.css')
+      
+  body
+  h1 = your id is #{objectid}
+  form(action='/questions', method="post")
+    .ui.input
+      input(type='text', placeholder='title', name='title')
+    br
+    .ui.fluid.action.input
+      input(type='text', placeholder='description', name='description')
+    .ui.input
+      input(type='hidden', placeholder='title', name='objectid', value='#{objectid}')
+      button.ui.secondary.button Add question
+      
+  a(href='/questions/allquestions') Click here for all questions
+    
+      
+  
+  
+  

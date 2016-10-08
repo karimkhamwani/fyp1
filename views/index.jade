@@ -1,0 +1,23 @@
+//extends ../node_modules/jade-bootstrap/layouts/navbar
+include ../node_modules/jade-bootstrap/_bootstrap
+//include ../views/signin
+
+//extends layout
+doctype html
+html
+  head
+      title= title
+      link(rel='stylesheet', href='/stylesheets/home.css')
+      link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+      link(rel='stylesheet', href='/stylesheets/semantic.css')
+      
+  body
+  include ../views/header
+  +carousel("Carousel ID_3",[
+    {image:"images/1.jpg",h1:"Headline #1",p:"Carousel Caption #1",button:{caption:"Sign up today",url:"#"}},
+    {image:"images/1.jpg",h1:"Headline #2",p:"Carousel Caption #2",button:{caption:"Sign up today",url:"#"}},
+    {image:"images/1.jpg",h1:"Headline #3",p:"Carousel Caption #3",button:{caption:"Sign up today",url:"#"}},
+    {image:"images/1.jpg",h1:"Headline #4",p:"Carousel Caption #4",button:{caption:"Sign up today",url:"#"}}
+])
+  
+    
